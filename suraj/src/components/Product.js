@@ -3,22 +3,15 @@ import { Card } from "react-bootstrap";
 const Product = ({ product }) => {
   console.log(product);
   return (
-    <>
-    <h1>hello</h1>
-    </>
-    // <Card className="my-3 p-3 rounded">
-    //   <a href={`/product/${product._id}`}>
-    //     <Card.Img src={product.image} variant="top" />
-    //   </a>
-    //   <Card.Body>
-    //     <a href={`/product/${product._id}`}>
-    //       <Card.Title as="div">
-    //         <strong>{product.name}</strong>
-    //       </Card.Title>
-    //     </a>
-    //     <Card.Text as="h3">{`${product.price}`}</Card.Text>
-    //   </Card.Body>
-    // </Card>
+    <Card className="my-3 p-3 rounded">
+        <Card.Img src={product.provider.logoUrl} variant="top" />
+      <Card.Body>
+          <Card.Title as="div">
+            <strong>{product.provider.shortName}</strong>
+          </Card.Title>
+        <Card.Text as="h3">{`${product.price.total}`}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 
